@@ -9,7 +9,7 @@
   <meta name="viewport" contents="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head Content/assets must come *after* these tags -->
 
-  <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../../libs/bootstrap/css/bootstrap.css">
 
   <meta name="description" content="">
   <meta name="author" content="">
@@ -18,12 +18,12 @@
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
-  <script src="../libs/angular/angular.js"></script>
-  <script src="../libs/angular/angular-route/angular-route.js"></script>
+  <script src="../../libs/angular/angular.js"></script>
+  <script src="../../libs/angular/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
-  <script src="appService.js"></script>
-  <script src="appController.js"></script>
-  <script src="appView/csi.js"></script>
+  <script src="customerService.js"></script>
+  <script src="customerController.js"></script>
+  <script src="customerView/csi.js"></script>
 
    <!-- 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -66,7 +66,7 @@
   <div class="jumbotron">
       <div class="container">
           <h2>CSI - Customer Satisfaction Index</h2>
-          <img alt="Brand" src="assets/img/Sogeti-liten.png">
+          <img alt="Brand" src="../assets/img/Sogeti-liten.png">
           <h3>Quality is the way to go!</h3>
           <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>-->
       </div>
@@ -88,7 +88,7 @@
               </thead>
               <tbody>
                   <tr ng-repeat="x in customers">
-                      <td><a href="customerView/customer.html">{{ x.Customer }}</a></td>
+                      <td><a href="csiView/csi.html">{{ x.Customer }}</a></td>
                       <td>{{ x.CreatedTime }}</td>
                       <td>{{ x.CreatedBy }}</td>
                       <td>{{ x.Active }}</td>
@@ -117,8 +117,8 @@
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="Content/assets/js/vendor/jquery.min.js"><\/script>')</script>
-  <script src="../libs/bootstrap/js/bootstrap.js"></script>
+  <script src="../../libs/bootstrap/js/bootstrap.js"></script>
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <script src="../libs/bootstrap/js/fix/ie10-viewport-bug-workaround.js"></script>
+  <script src="../../libs/bootstrap/js/fix/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>

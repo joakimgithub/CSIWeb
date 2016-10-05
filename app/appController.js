@@ -7,16 +7,26 @@
 myApp.controller('CSIController', function ($scope, CSIService) {
 
     getAllCustomers();
+
+
+
     function getAllCustomers() {
         var servCall = CSIService.getAllCustomers();
         servCall.then(function (d) {
-            debugger;
             $scope.customers = d;
         }, function (error) {
             $log.error('Oops! Something went wrong while fetching the customer data.')
         })
     }
 
+    function getAllCSIForCustomer() {
+        var servCall = CSIService.getAllCSIForCustomer();
+        servCall.then(function (d) {
+            $scope.customers = d;
+        }, function (error) {
+            $log.error('Oops! Something went wrong while fetching the customer data.')
+        })
+    }
 
 })
 

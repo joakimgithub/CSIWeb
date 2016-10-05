@@ -9,7 +9,6 @@ myApp.service('CSIService', function ($http) {
             return response.data;
         });
     }
-
     
 });
 
