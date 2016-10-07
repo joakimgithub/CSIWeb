@@ -1,4 +1,4 @@
-myApp.service('CustomerService', function ($http) {
+angular.module('CustomerModule').service('CustomerService', function ($http) {
 
     this.getAllCSIForCustomer = function () {
         var url = 'http://a01c01101c/CSIService/api/csi_Customer';

@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="CustomerModule" class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,10 +20,10 @@
   -->
   <script src="../../libs/angular/angular.js"></script>
   <script src="../../libs/angular/angular-route/angular-route.js"></script>
-  <script src="app.js"></script>
-  <script src="customerService.js"></script>
+  <script src="../app.js"></script>
+  <!--<script src="customer.js"></script>-->
   <script src="customerController.js"></script>
-  <script src="customerView/csi.js"></script>
+  <script src="customerService.js"></script>
 
    <!-- 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -74,7 +74,7 @@
 
 
   <!-- Customers Table (CSIController) -->
-  <div ng-app="myApp" ng-controller="CSIController">
+  <div ng-controller="CustomerController">
       <div class="table-responsive table-hover table-striped">
           <table class="table">
               <thead>

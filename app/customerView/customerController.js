@@ -1,4 +1,4 @@
-myApp.controller('CustomerController', function ($scope, CustomerService) {
+angular.module('CustomerModule').controller('CustomerController', function ($scope, CustomerService) {
 
     getAllCSIForCustomer();
 
@@ -10,5 +10,6 @@ myApp.controller('CustomerController', function ($scope, CustomerService) {
             $log.error('Oops! Something went wrong while fetching the customers all CSI.')
         })
     }
+
 
 })

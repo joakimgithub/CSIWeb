@@ -4,11 +4,9 @@
 //A new child scope will be created and made available as an injectable 
 //parameter to the Controller's constructor function as $scope.
 
-myApp.controller('CSIController', function ($scope, CSIService) {
+angular.module('myApp').controller('CSIController', function ($scope, CSIService) {
 
     getAllCustomers();
-
-
 
     function getAllCustomers() {
         var servCall = CSIService.getAllCustomers();
@@ -19,14 +17,5 @@ myApp.controller('CSIController', function ($scope, CSIService) {
         })
     }
 
-    function getAllCSIForCustomer() {
-        var servCall = CSIService.getAllCSIForCustomer();
-        servCall.then(function (d) {
-            $scope.customers = d;
-        }, function (error) {
-            $log.error('Oops! Something went wrong while fetching the customer data.')
-        })
-    }
 
 })
-

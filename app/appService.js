@@ -4,11 +4,12 @@
 myApp.service('CSIService', function ($http) {
 
     this.getAllCustomers = function () {
-        var url = 'http://a01c01101c/CSIService/api/csi_Customer';
+        // var url = 'http://a01c01101c/CSIService/api/csi_Customer';
+        var url = 'http://a01c01263c/CSIService/api/csi_Customer';
         return $http.get(url).then(function (response) {
             return response.data;
         });
     }
-    
+
 });
 
