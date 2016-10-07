@@ -5,7 +5,7 @@ angular.module('CustomerModule').controller('CustomerController', function ($sco
     function getAllCSIForCustomer() {
         var servCall = CustomerService.getAllCSIForCustomer();
         servCall.then(function (d) {
-            $scope.customers = d;
+            $scope.CSIs = d;
         }, function (error) {
             $log.error('Oops! Something went wrong while fetching the customers all CSI.')
         })
