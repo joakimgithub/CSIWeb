@@ -16,6 +16,20 @@ angular.module('myApp').controller('CSIController', function ($scope, CSIService
             $log.error('Oops! Something went wrong while fetching the customer data.')
         })
     }
+});
 
-
-})
+angular.module('myApp').controller('LoginController', function ($scope, $http, $window, userService) {
+$scope.login = function() {
+    $http({
+        method : 'POST',
+        url : '/login',
+        data : $scope.user
+    }).success(function (data) {
+        userService.setEmail("foobar");
+        $window.location.href = '/app'
+    }).error(function(data) {
+        $scope.login.error = true;
+        $scope.error = data;
+    });
+}
+});
